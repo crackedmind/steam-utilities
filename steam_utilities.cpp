@@ -66,7 +66,7 @@ QString SteamUtilities::GetGameInstallPath(const QLatin1String game_id)
         vdf_block.replace('\n',"");
         vdf_block.replace('\"',"");
 
-        auto vdf_options = vdf_block.trimmed().split('\t', QString::SkipEmptyParts);
+        QStringList vdf_options = vdf_block.trimmed().split('\t', QString::SkipEmptyParts);
 
         for ( int i = 0; i < vdf_options.size();i++)
         {
