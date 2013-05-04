@@ -1,7 +1,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <Windows.h>
-#include "steam_utilites.hpp"
+#include "steam_utilities.hpp"
 
 const wchar_t STEAM_PATH[] = L"SteamPath";
 const wchar_t STEAM_ROOT[] = L"Software\\Valve\\Steam";
