@@ -43,7 +43,7 @@ QString SteamUtilities::GetSteamConfigFile()
 // very very dirty function
 // because i'm too lazy to write full-fledged adf/vdf parser
 // return empty string if game wasn't found
-QString SteamUtilities::GetGameInstallPath(const char * game_id)
+QString SteamUtilities::GetGameInstallPath(const QLatin1String game_id)
 {
     QFile config(SteamUtilities::GetSteamConfigFile());
     QString lines;
@@ -70,7 +70,7 @@ QString SteamUtilities::GetGameInstallPath(const char * game_id)
 
         for ( int i = 0; i < vdf_options.size();i++)
         {
-            if (vdf_options[i] == "installdir" )
+            if ( vdf_options[i] == QLatin1String("installdir") )
                 return vdf_options[i+1];
         }
     }
